@@ -42,5 +42,11 @@
     <ClCompile Include="loccal_Val.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="static.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="recur.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
