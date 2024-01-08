@@ -90,5 +90,11 @@
     <ClCompile Include="lotto_320.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="getchar.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="buffer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
