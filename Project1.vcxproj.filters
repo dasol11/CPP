@@ -186,6 +186,15 @@
     <ClCompile Include="main1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="476.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15_1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15-6.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">
