@@ -16,11 +16,13 @@ int main(void)
 	return 0;
 }
 
-int input_name(char(*name)[20])
+int input_name(char(*name)[20])//name[][]
 {
 	int cnt = 0;
 	char temp[20];
-	 
+	char test = 'ww';
+	char test2[] = {'1','2'};
+
 	while (1)
 	{
 		if (cnt == 10)

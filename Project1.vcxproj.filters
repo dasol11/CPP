@@ -198,6 +198,12 @@
     <ClCompile Include="16-1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="16-2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="540.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">
