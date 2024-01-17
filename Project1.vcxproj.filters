@@ -246,6 +246,9 @@
     <ClCompile Include="AdderProcess.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="CreateProcess.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">
