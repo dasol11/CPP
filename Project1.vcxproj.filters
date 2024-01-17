@@ -249,6 +249,15 @@
     <ClCompile Include="CreateProcess.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Operation1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Operation2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="KerObjShare.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">
