@@ -261,6 +261,9 @@
     <ClCompile Include="MailReceiver.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="anonymous.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">
