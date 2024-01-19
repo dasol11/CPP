@@ -264,6 +264,12 @@
     <ClCompile Include="anonymous.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="CountThread.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Createcpp.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">

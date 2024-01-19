@@ -2,7 +2,6 @@
 
 
 
-
 #include <stdio.h>
 #include <tchar.h>
 #include <windows.h>
@@ -11,7 +10,7 @@ int _tmain(int argc, TCHAR* argv[])
 {
 	HANDLE hReadPipe, hWritePipe; // pipe handle
 
-	TCHAR sendString[] = _t("anonymous pipe ");
+	TCHAR sendString[] = _T("anonymous pipe ");
 	TCHAR recvString[100];
 	
 	DWORD bytesWritten;
