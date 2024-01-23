@@ -312,6 +312,12 @@
     <ClCompile Include="RacingMain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="135_3_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="135_class.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">
@@ -324,6 +330,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Car.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="135.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
