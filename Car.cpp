@@ -3,9 +3,6 @@
 #include "Car.h"
 using namespace std;
 
-
-
-
 void Car::InitMembers(char* ID, int fuel)
 {
 	strcpy(gamerID, ID);

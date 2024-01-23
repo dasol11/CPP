@@ -9,7 +9,6 @@ class Calculator
 private:
 	int add, min, mul, div;
 
-
 public:
 	void Init();
 	double Add(double a, double b);
@@ -19,10 +18,4 @@ public:
 	void ShowOpCount();
 
 };
-
-
-
-
-
-
 #endif

@@ -1,7 +1,5 @@
 #include "135.h"
 
-
-
 void Calculator::Init() 
 { 
 	Calculator::add = 0;

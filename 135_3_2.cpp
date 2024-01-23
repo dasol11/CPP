@@ -1,9 +1,5 @@
 #include "135.h"
 
-
-
-
-
 int main(void)
 {
 	Calculator cal;
@@ -15,4 +11,5 @@ int main(void)
 	cout << "4.9 / 1.2 = " << cal.Div(4.9, 1.2) << endl;
 	cal.ShowOpCount();
 	return 0;
+
 }
