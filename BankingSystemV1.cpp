@@ -48,15 +48,9 @@ public:
 	}
 	void ShowAccInfoe()
 	{
-		cout << "계좌ID : ";
-		cin >> accID;
-		cout << endl;
-		cout << "이 름 : ";
-		cin >> cusname;
-		cout << endl;
-		cout << "잔 액 : ";
-		cin >> accmoney;
-		cout << endl;
+		cout << "계좌ID : "<< accID<<endl;
+		cout << "이 름 :" << cusname << endl;
+		cout << "잔 액 : "<< accmoney << endl;
 	}
 	~Account()
 	{
@@ -152,7 +146,7 @@ void DepositMonet(void)
 		}
 	}
 	cout << "유효하지 않은 ID 입니다." << endl << endl;
-
+	return;
 }
 
 
@@ -179,6 +173,7 @@ void WithdrawMoney(void)
 		}
 	}
 	cout << "유효하지 않은 ID 입니다." << endl << endl;
+	return;
 }
 void ShowAllAccInfo(void)
 {
