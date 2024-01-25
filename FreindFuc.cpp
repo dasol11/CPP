@@ -11,7 +11,6 @@ private:
 public:
 	PointOP() : opcnt(0)
 	{}
-
 	Point PointAdd(const Point&, const Point&);
 	Point PointSub(const Point&, const Point&);
 	~PointOP()
@@ -34,8 +33,6 @@ private:
 	int y;
 };
 
-
-
 Point PointOP::PointAdd(const Point& pnt1, const Point& pnt2)
 {
 	opcnt++;
@@ -48,7 +45,6 @@ Point PointOP::PointSub(const Point& pnt1, const Point& pnt2)
 	return Point(pnt1.x - pnt2.x, pnt1.y - pnt2.y);
 }
 
-
 int main(void)
 {
 	Point pos1(1, 2);
@@ -59,7 +55,6 @@ int main(void)
 	ShowPointPos(op.PointSub(pos2, pos1));
 	return 0;
 }
-
 
 void ShowPointPos(const Point& pos)
 {

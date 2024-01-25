@@ -15,7 +15,6 @@ enum {
 	MAKE = 1, DEPOSIT, WITHDRAW, INQUIRE, EXIT
 };
 
-
 class Account
 {
 
