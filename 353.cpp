@@ -2,7 +2,7 @@
 #include <cstring>
 using namespace std;
 
-class Employee
+class Employee // 1개 이상의 순수 가상함수를 가지고 있기 때문에 추상 클래스이다.
 {
 private:
 	char name[100];
@@ -15,12 +15,10 @@ public:
 	{
 		cout << "name: " << name << endl;
 	}
-	virtual int GetPay() const 
-	{
-		return 0;
-	}
-	virtual void ShowSalaryInfo() const
-	{}
+	virtual int GetPay() const = 0; //순수 가상함수 
+	// 대입의 의미가 아니라 명시적으로 몸체가 없다는 것을 컴파일러에게 알리는 것임! 
+	virtual void ShowSalaryInfo() const = 0; // 순수 가상함수
+	
 };
 
 class PermanentWorker : public Employee
@@ -56,19 +54,19 @@ public:
 	}
 	void ShowSalaryInfo() const
 	{
-		
-		for (int i = 0;i<empNum;i++)
+
+		for(int i = 0; i < empNum; i++)
 			empList[i]->ShowSalaryInfo();
-		
+
 		// 주석을 해체하면 컴파일 에러 이유는 가상함수와 관련
 	}
 	void ShowTotalSalaty() const
 	{
 		int sum = 0;
-		
+
 		for(int i = 0; i < empNum; i++)
 			sum += empList[i]->GetPay();
-		
+
 		cout << "Salary sum: " << sum << endl;
 
 	}

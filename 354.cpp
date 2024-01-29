@@ -2,7 +2,7 @@
 #include <cstring>
 using namespace std;
 
-class Employee
+class Employee // 1개 이상의 순수 가상함수를 가지고 있기 때문에 추상 클래스이다.
 {
 private:
 	char name[100];
@@ -15,12 +15,10 @@ public:
 	{
 		cout << "name: " << name << endl;
 	}
-	virtual int GetPay() const 
-	{
-		return 0;
-	}
-	virtual void ShowSalaryInfo() const
-	{}
+	virtual int GetPay() const = 0; //순수 가상함수 
+	// 대입의 의미가 아니라 명시적으로 몸체가 없다는 것을 컴파일러에게 알리는 것임! 
+	virtual void ShowSalaryInfo() const = 0; // 순수 가상함수
+
 };
 
 class PermanentWorker : public Employee
@@ -56,19 +54,19 @@ public:
 	}
 	void ShowSalaryInfo() const
 	{
-		
-		for (int i = 0;i<empNum;i++)
+
+		for(int i = 0; i < empNum; i++)
 			empList[i]->ShowSalaryInfo();
-		
+
 		// 주석을 해체하면 컴파일 에러 이유는 가상함수와 관련
 	}
 	void ShowTotalSalaty() const
 	{
 		int sum = 0;
-		
+
 		for(int i = 0; i < empNum; i++)
 			sum += empList[i]->GetPay();
-		
+
 		cout << "Salary sum: " << sum << endl;
 
 	}
@@ -130,26 +128,56 @@ public:
 
 };
 
+namespace RISK_LEVEL
+{
+	enum {RISK_A = 30, RISK_B = 20,RISK_C=10};
+}
+class ForeignSalesWorker : public SalesWorker
+{
+private:
+	int risk_Level;
+public:
+	ForeignSalesWorker(char* name, int money, double ratio, int risk)
+		: SalesWorker(name, money, ratio), risk_Level(risk)
+	{}
+	int GetRiskPay() const
+	{
+		return (int)(SalesWorker::GetPay() * (risk_Level / 100.0));
+	}
+	int GetPay()const
+	{
+		return SalesWorker::GetPay() + GetRiskPay();
+	}
+	void ShowSalaryInfo() const
+	{
+		ShowYourName();
+		cout << "salary : " << SalesWorker::GetPay() << endl;
+		cout << "risk pay : " << GetRiskPay() << endl;
+		cout << "sum : " << GetPay() << endl << endl;
+	}
+};
+
 int main(void)
 {
 	EmployeeHandler handlar;
-	// 정규직 등록
-	handlar.AddEmployee(new PermanentWorker("KIM", 1000));
-	handlar.AddEmployee(new PermanentWorker("LEE", 1500));
+	
 
-	// 임시직 등록
-	TemporaryWorker* alba = new TemporaryWorker("Jung", 700);
-	alba->AddWorkTime(5);
-	handlar.AddEmployee(alba);
+	// 해외 영업직 등록
+	ForeignSalesWorker* fseller1 = new ForeignSalesWorker("Hong", 1000, 0.1, RISK_LEVEL::RISK_A); //RISK_LEVEL::RISK_A = 30  
+	fseller1->AddSalesRecult(7000);
+	handlar.AddEmployee(fseller1);
 
-	//영업직 등록
-	SalesWorker* seller = new SalesWorker("Hong", 1000, 0.1);
-	seller->AddSalesRecult(7000);
-	handlar.AddEmployee(seller);
+	ForeignSalesWorker* fseller2 = new ForeignSalesWorker("Yoon", 1000, 0.1, RISK_LEVEL::RISK_B);
+	fseller2->AddSalesRecult(7000);
+	handlar.AddEmployee(fseller2);
+
+	ForeignSalesWorker* fseller3 = new ForeignSalesWorker("Lee", 1000, 0.1, RISK_LEVEL::RISK_C);
+	fseller3->AddSalesRecult(7000);
+	handlar.AddEmployee(fseller3);
 
 	// 지불해야할 급여
 	handlar.ShowSalaryInfo();
-	// 지불해야할 급여 총합
-	handlar.ShowTotalSalaty();
+	
+
 	return 0;
 }
