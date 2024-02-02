@@ -450,6 +450,9 @@
     <ClCompile Include="510.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="511.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">
