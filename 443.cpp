@@ -44,8 +44,8 @@ int main(void)
 	First fcpy;
 	Second ssrc(333, 444);
 	Second scpy;
-	fcpy = fsrc;
-	scpy = ssrc;
+	fcpy = fsrc; // fcpy.operater=(fsrc)
+	scpy = ssrc; // scpy.operater=(ssrc)
 	fcpy.ShowData();
 	scpy.ShowData();
 	
