@@ -102,9 +102,6 @@ istream& operator>> (istream & is, const String & s)
 
 }*/
 
-#include <iostream>
-#include <string>
-using namespace std;
 
 int main(void)
 {
